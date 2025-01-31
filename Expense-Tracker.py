@@ -23,6 +23,16 @@ def view_expenses():
         for i, expense in enumerate(expenses_list, start=1):
             print(f"{i}. Date: {expense['date']} - Amount: ${expense['amount']:.2f}")
 
+def calculate_total_expenses():
+    total = sum(expense["amount"] for expense in expenses)
+    print(f"\nTotal Expenses: ${total:.2f}")
+
+def delete_expense(index):
+    try:
+        removed_expense = expenses.pop(index - 1)
+        print(f"Deleted Expense: {removed_expense['category']} on {removed_expense['date']} - ${removed_expense['amount']:.2f}")
+    except IndexError:
+        print("Invalid index. No expense found at that index.")
 
 # Menu
 def main():
