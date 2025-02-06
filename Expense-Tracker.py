@@ -11,7 +11,7 @@ def view_expenses():
         return
     
 # Group expenses by category
-def categorized_expenses = ():
+def categorized_expenses():
     for expense in expenses:
         category = expense["category"]
         if category not in categorized_expenses:
