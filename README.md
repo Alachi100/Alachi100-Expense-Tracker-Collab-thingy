@@ -3,7 +3,7 @@ by Matthew Law, Alan Chin, and Mei Aizen Dosdosen
 Team Members & Roles:
 - Alan Chin: Implemented menu options, add expense, view expenses.
 - Mei Aizen Dosdosen: Added feature to delete an expense and to calculate total of expenses.
-- Matthew Law: Filtering by Category .
+- Matthew Law: Filtering by Category, revise overall code.
 
 Challenges & Solutions:
 Challenges that we had included how to manage data smoothly in cases of adding, deleting, and filtering of expenses. To resolve this challenge, we structured our code to handle input validation and kept stored expenses in a consistent format. Debugging and testing various scenarios also refined the functionality of our program.
