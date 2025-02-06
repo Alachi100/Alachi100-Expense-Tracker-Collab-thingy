@@ -1,17 +1,17 @@
 # Dictionary to store expense data
 expenses = []
-
+# Add expenses
 def add_expense(category, amount, date):
     expense = {"category": category, "amount": amount, "date": date}
     expenses.append(expense)
-
+# View expenses
 def view_expenses():
     if not expenses:
         print("No expenses recorded.")
         return
     
-    # Group expenses by category
-    categorized_expenses = {}
+# Group expenses by category
+def categorized_expenses = ():
     for expense in expenses:
         category = expense["category"]
         if category not in categorized_expenses:
@@ -22,11 +22,11 @@ def view_expenses():
         print(f"\nCategory: {category}")
         for i, expense in enumerate(expenses_list, start=1):
             print(f"{i}. Date: {expense['date']} - Amount: ${expense['amount']:.2f}")
-
+# Calculating total expense
 def calculate_total_expenses():
     total = sum(expense["amount"] for expense in expenses)
     print(f"\nTotal Expenses: ${total:.2f}")
-
+# Delete expense
 def delete_expense(index):
     try:
         removed_expense = expenses.pop(index - 1)
