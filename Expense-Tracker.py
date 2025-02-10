@@ -10,7 +10,7 @@ def view_expenses():
         print("No expenses recorded.")
         return
     
-# Group expenses by category
+# Group and filter expenses by category
 def categorized_expenses():
     for expense in expenses:
         category = expense["category"]
