@@ -9,19 +9,6 @@ def view_expenses():
     if not expenses:
         print("No expenses recorded.")
         return
-    
-# Group and filter expenses by category
-def categorized_expenses():
-    for expense in expenses:
-        category = expense["category"]
-        if category not in categorized_expenses:
-            categorized_expenses[category] = []
-        categorized_expenses[category].append(expense)
-    
-    for category, expenses_list in categorized_expenses.items():
-        print(f"\nCategory: {category}")
-        for i, expense in enumerate(expenses_list, start=1):
-            print(f"{i}. Date: {expense['date']} - Amount: ${expense['amount']:.2f}")
 # Calculating total expense
 def calculate_total_expenses():
     total = sum(expense["amount"] for expense in expenses)
