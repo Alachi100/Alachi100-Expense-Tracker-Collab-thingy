@@ -9,6 +9,9 @@ def view_expenses():
     if not expenses:
         print("No expenses recorded.")
         return
+def filter_expenses_by_category(category):
+    for expense in expenses:
+        category = expense("category")
 # Calculating total expense
 def calculate_total_expenses():
     total = sum(expense["amount"] for expense in expenses)
