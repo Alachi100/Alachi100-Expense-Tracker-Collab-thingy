@@ -2,17 +2,18 @@
 expenses = []
 # Add expenses
 def add_expense(category, amount, date):
-    expense = {"category": category, "amount": amount, "date": date}
+    expense = {"category bro": category, "amount bro": amount, "date bro": date}
     expenses.append(expense)
 # View expenses
 def view_expenses():
     if not expenses:
-        print("No expenses recorded.")
+        print("No expenses recorded bro.")
         return
-def filter_expenses_by_category(category):
+#filtering expense
+    def filter_expenses_by_category(category):
     for expense in expenses:
         category = expense("category")
-# Calculating total expense
+# Calculating total
 def calculate_total_expenses():
     total = sum(expense["amount"] for expense in expenses)
     print(f"\nTotal Expenses: ${total:.2f}")
@@ -22,12 +23,12 @@ def delete_expense(index):
         removed_expense = expenses.pop(index - 1)
         print(f"Deleted Expense: {removed_expense['category']} on {removed_expense['date']} - ${removed_expense['amount']:.2f}")
     except IndexError:
-        print("Invalid index. No expense found at that index.")
+        print("Invalid index bro")
 
 # Menu
 def main():
     while True:
-        print("\nExpense Tracker")
+        print("Expense Tracker:┬┴┬┴┤(･_├┬┴┬┴")
         print("1. Add Expense")
         print("2. View All Expenses")
         print("3. Filter by Category")
@@ -37,22 +38,22 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            category = input("Enter category: ")
-            amount = float(input("Enter amount: "))
-            date = input("Enter date (YYYY-MM-DD): ")
+            category = input("Enter category bro: ")
+            amount = float(input("Enter amount bro: "))
+            date = input("Enter date bro(YYYY-MM-DD): ")
             add_expense(category, amount, date)
         elif choice == "2":
             view_expenses()
         elif choice == "3":
-            category = input("Enter category to filter: ")
+            category = input("Enter category bro: ")
             filter_expenses_by_category(category)
         elif choice == "4":
             calculate_total_expenses()
         elif choice == "5":
-            index = int(input("Enter expense index to delete: "))
+            index = int(input("Enter expense to delete bro "))
             delete_expense(index)
         elif choice == "6":
-            print("Exiting Expense Tracker.")
+            print("lol bye(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧")
             break
         else:
             print("Invalid choice. Try again.")
