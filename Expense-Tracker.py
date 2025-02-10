@@ -9,13 +9,13 @@ def view_expenses():
     if not expenses:
         print("No expenses recorded bro.")
         return
-#filtering expense
-   def view_expenses():
-    if not expenses:
-        print("No expenses recorded bro.")
-        return
     for i, expense in enumerate(expenses, start=1):
         print(f"{i}. Category: {expense['category']} - Date: {expense['date']} - Amount: ${expense['amount']:.2f}")
+#filtering expense
+def filter_expenses_by_category():
+    for expense in expenses:
+    category = expense("category")
+elif category not 
 # Calculating total
 def calculate_total_expenses():
     total = sum(expense["amount"] for expense in expenses)
@@ -49,7 +49,7 @@ def main():
             view_expenses()
         elif choice == "3":
             category = input("Enter category bro: ")
-            filter_expenses_by_category(category)
+            filter_expenses_by_category()
         elif choice == "4":
             calculate_total_expenses()
         elif choice == "5":
