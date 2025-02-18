@@ -17,9 +17,13 @@ def view_expenses():
     
 # Filter by category
 def filter_categorized_expenses(category):
-    for expense in expenses:
-        category = expense("category")
-        if category in categorized_expenses:
+    filtered_expenses = [expense for expense in expenses if expense["category"] == category]
+    
+    if filtered_expenses:
+        for i, expense in enumerate(filtered_expenses, start=1):
+            print(f"{i}. Category: {expense['category']} - Date: {expense['date']} - Amount: ${expense['amount']:.2f}")
+    else:
+        print(f"No expenses found for category: {category}")
             
 # Calculate total expenses
 def calculate_total_expenses():
